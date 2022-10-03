@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: min(calc(1em + 1vw), 4em);
+}
+
+body {
+	min-height: 100vh;
+	padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
+
+	font-family: sans-serif;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: 'kern' 1, 'liga' on, 'dlig' on;
+	line-height: 1.5;
+
+	background: linear-gradient(90deg, silver, grey);
+}
+
+body div > * {
+	--layout-spacing: max(6vh, 2em);
+	--max-width: 38rem;
+	width: min(100%, var(--max-width));
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(1rem);
+	border-radius: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0.8rem 0.8rem 1.6rem 0 rgba(206, 205, 205, 0.5),
+		-0.8rem -0.8rem 1.6rem 0 rgba(255, 255, 255, 0.5);
+	padding: 1em;
+	border-radius: 1em;
+}
+
+body div > * + * {
+	margin-top: var(--layout-spacing);
+}
