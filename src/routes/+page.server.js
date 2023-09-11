@@ -1,13 +1,11 @@
-import createClient from '$lib/utils/prismicio';
-import { error } from '@sveltejs/kit';
+import { createClient } from '$lib/prismicio'
 
 export async function load({ fetch, request }) {
-	const client = createClient({ fetch, request });
-	const document = await client.getByUID('page', 'home');
+  const client = createClient({ fetch, request })
 
-	if (document) {
-		return { document };
-	}
+  const document = await client.getByUID('home', 'home', {
+    fetchLinks: ['board.name', 'board.brand', 'board.image', 'board.length'],
+  })
 
-	throw error(404, 'Not found');
+  return document.data
 }

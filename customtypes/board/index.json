@@ -1,0 +1,89 @@
+{
+  "id": "board",
+  "label": "board",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "name",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "brand": {
+        "type": "Text",
+        "config": {
+          "label": "brand",
+          "placeholder": ""
+        }
+      },
+      "type": {
+        "type": "Select",
+        "config": {
+          "label": "type",
+          "placeholder": "Selecteer een type",
+          "options": [
+            "Distance",
+            "Surfskate",
+            "Street",
+            "Dancer",
+            "Hybrid",
+            "Cruiser"
+          ]
+        }
+      },
+      "length": {
+        "type": "Number",
+        "config": {
+          "label": "length",
+          "placeholder": ""
+        }
+      },
+      "width": {
+        "type": "Number",
+        "config": {
+          "label": "width",
+          "placeholder": ""
+        }
+      },
+      "wheelbase": {
+        "type": "Number",
+        "config": {
+          "label": "wheelbase",
+          "placeholder": ""
+        }
+      },
+      "trucks": {
+        "type": "Text",
+        "config": {
+          "label": "trucks",
+          "placeholder": ""
+        }
+      },
+      "wheels": {
+        "type": "Text",
+        "config": {
+          "label": "wheels",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

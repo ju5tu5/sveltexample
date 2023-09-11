@@ -1,0 +1,37 @@
+{
+  "id": "board_list",
+  "type": "SharedSlice",
+  "name": "BoardList",
+  "description": "BoardList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "board": {
+          "type": "Link",
+          "config": {
+            "label": "board",
+            "select": "document",
+            "customtypes": [
+              "board"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

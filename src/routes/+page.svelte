@@ -1,17 +1,13 @@
 <script>
-	import * as helpers from '@prismicio/helpers';
-	export let data;
-	let { document } = data;
+  import * as prismic from '@prismicio/client'
+  import { SliceZone } from '@prismicio/svelte'
+  import { components } from '$lib/slices'
+
+  export let data
 </script>
 
-<section>
-	{@html helpers.asHTML(document.data.title)}
+<article>
+  {@html prismic.asHTML(data.intro)}
+</article>
 
-	{@html helpers.asHTML(document.data.main)}
-</section>
-
-<style>
-	h2 {
-		color: hotpink;
-	}
-</style>
+<SliceZone slices={data.slices} {components} />
